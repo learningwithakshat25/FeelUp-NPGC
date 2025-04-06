@@ -16,8 +16,10 @@ const Login = () => {
     };
     const response =  await axios.post('http://localhost:3000/login', userData)
     .then((result)=>{
-      console.log(result);
+      localStorage.setItem('tokenData', JSON.stringify(result.data));
       navigate('/profile')  ;
+
+      console.log(result);
     })
     console.log(response);
   }

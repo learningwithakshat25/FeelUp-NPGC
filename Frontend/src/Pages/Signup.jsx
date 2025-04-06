@@ -23,12 +23,11 @@ const Signup = () => {
       email: email,
       password: password
     };
-
     const response = await axios.post('http://localhost:3000/register',userData)
     .then((result) =>{
       localStorage.setItem('tokenData', JSON.stringify(result.data));
-      console.log(result.data)
-      navigate('/login')
+      console.log(result);
+      navigate('/login');
     })
     .catch(err => console.log(err)
     )

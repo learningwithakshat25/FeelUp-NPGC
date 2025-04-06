@@ -18,6 +18,7 @@ const App = () => {
         <Route path='/' element={<AppLayout />}>
         <Route element={<Protect/>}>
             <Route path='/profile' element={<Profile />}/>
+            
           </Route>
           <Route path='/' element={<HomeBundler />} />
           <Route path='/login' element={<Login />} />
